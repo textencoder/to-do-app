@@ -1,10 +1,6 @@
-class Project {
-    constructor(title, ...todos) {
+export default class Project {
+    constructor(title, ...toDoList) {
         this.title = title; //expects string
-        this.todos = [...todos]; //expects array of strings
+        this.toDoList = [...toDoList]; //expects array of strings
     }
 }
-
-export const project1 = new Project("sweep floor", "wash dishes", "take out garbage");
-
-console.log(project1)
