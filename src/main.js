@@ -1,10 +1,8 @@
-import './style.css'
-import { project1 } from './project'
-
-
-
+import './style.css';
+/*
 document.querySelector('#app').innerHTML = `
   <div>
     yeet
   </div>
 `
+*/
