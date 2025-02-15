@@ -3,14 +3,17 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+ 
+  background-color: whitesmoke;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-blue: #5f33e1;
+  --color-yellow: #ffe5a4;
+  --color-pink: #f778ba;
+  --color-light-blue: #ebe4ff;
 }
 
 * {
@@ -49,6 +52,10 @@ header {
     width: 36px;
     cursor: pointer;
   }
+
+  svg:hover {
+    stroke: var(--color-blue);
+  }
 }
 
 main {
@@ -60,10 +67,20 @@ main {
 }
 
 .project-tile {
-  height: 200px;
+  height: 240px;
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid dodgerblue;
+  border: 1px solid rgb(200, 200, 200);
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  padding: 0 20px;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  p {
+    display: grid;
+    align-self: center;
+  }
 }
 
 footer {
@@ -71,16 +88,24 @@ footer {
   place-items: center;
 
   button {
-    width: 30%;
+    width: 33%;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     border: none;
     font-size: 1rem;
+    background-color: var(--color-blue);
+    font-weight: 500;
+    color: white;
+  }
+
+  button:hover {
+    background-color: hsl(255, 74%, 44%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 }
 
