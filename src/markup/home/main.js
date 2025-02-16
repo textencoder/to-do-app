@@ -6,10 +6,10 @@ const buildHomeMain = () => {
 
   document.querySelector('#app').appendChild(homeMain);
 
-  buildProject();
+  buildProjectTile();
 }
 
-const buildProject = () => {
+const buildProjectTile = () => {
   const projectTile = document.createElement('section');
   const projectName = document.createElement('h2');
   const tasksCompleted = document.createElement('p');

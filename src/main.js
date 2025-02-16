@@ -1,12 +1,9 @@
 import './style.css';
-import buildHomeHeader from './markup/home/header.js';
-import buildHomeMain from './markup/home/main.js';
-import buildHomeFooter from './markup/home/footer.js';
 
-import projectHeader from './markup/projects/header.js';
-import projectMain from './markup/projects/main.js';
-import projectFooter from './markup/projects/footer.js';
+import buildHomePage from './builds/buildHome.js';
+import buildProjectPage from './builds/buildProject.js';
 
-buildHomeHeader();
-buildHomeMain();
-buildHomeFooter();
+buildHomePage();
+
+
+

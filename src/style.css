@@ -59,7 +59,7 @@ header {
   }
 }
 
-#home-main {
+main {
   display: grid;
   gap: 20px;
   padding: 20px;
@@ -108,13 +108,7 @@ footer {
   }
 }
 
-#project-main {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  overflow-y: scroll;
-  scrollbar-width:none;
-}
+
 
 .task-tile {
   height: 120px;
