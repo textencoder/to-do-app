@@ -25,3 +25,5 @@ addToDo(0, new ToDo('take out garbage', 'dispose of trash and replace with new b
 addToDo(1, new ToDo('create module', 'import classes and interconnect', null, 'high'))
 
 console.log(projectArr)
+
+export { projectArr };
