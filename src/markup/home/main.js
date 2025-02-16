@@ -6,21 +6,25 @@ const buildHomeMain = () => {
 
   document.querySelector('#app').appendChild(homeMain);
 
-  buildProjectTile();
+  for (let i=0; i<projectArr.length; i++) {
+    buildProjectTile(i);
+  }
 }
 
-const buildProjectTile = () => {
+const buildProjectTile = (index) => {
   const projectTile = document.createElement('section');
   const projectName = document.createElement('h2');
   const tasksCompleted = document.createElement('p');
+  projectTile.dataset.label = index;
 
   projectTile.classList.add('project-tile')
 
-  tasksCompleted.textContent = `0/${projectArr[0].toDoList.length} tasks • 0%`
-  projectName.textContent = projectArr[0].title;
+  tasksCompleted.textContent = `0/${projectArr[index].toDoList.length} tasks • 0%`
+  projectName.textContent = projectArr[index].title;
 
-  document.querySelector('#home-main').appendChild(projectTile)
   projectTile.append(tasksCompleted, projectName);
+
+  document.querySelector('#home-main').appendChild(projectTile);
 }
 
 export default buildHomeMain;

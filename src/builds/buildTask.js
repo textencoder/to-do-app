@@ -4,8 +4,8 @@ import buildTaskFooter from "../markup/tasks/footer";
 
 import buildProjectPage from "./buildProject";
 
-export default function buildTaskPage() {
-    buildTaskHeader();
+export default function buildTaskPage(index) {
+    buildTaskHeader(index);
     buildTaskMain();
     buildTaskFooter();
 

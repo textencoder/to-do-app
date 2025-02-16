@@ -15,14 +15,19 @@ const project1 = new Project("Deep Clean",
                             new ToDo('wash dishes', 'rinse and run dishwasher', null, 'high'));
 const project2 = new Project("To Do App",
                             new ToDo('project module', 'create project class', null, 'high'), 
-                            new ToDo('toDo module', 'create toDo class', null, 'high'))
+                            new ToDo('toDo module', 'create toDo class', null, 'high'));
+
+const project3 = new Project("Go Out Today",
+                            new ToDo('get dressed', 'its a cold world bundle up', null, 'high'), 
+                            new ToDo('go to store', 'buy some goofy juice', null, 'high'))
 
 addProjectToMemory(project1)
 addProjectToMemory(project2)
+addProjectToMemory(project3)
 
 addToDo(0, new ToDo('take out garbage', 'dispose of trash and replace with new bag', null, 'high'))
-
 addToDo(1, new ToDo('create module', 'import classes and interconnect', null, 'high'))
+addToDo(2, new ToDo('help mom', 'no room for fake plants', null, 'high'))
 
 console.log(projectArr)
 
