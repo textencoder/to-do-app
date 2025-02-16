@@ -4,13 +4,15 @@ import buildTaskFooter from "../markup/tasks/footer";
 
 import buildProjectPage from "./buildProject";
 
-export default function buildTaskPage(index) {
-    buildTaskHeader(index);
+export default function buildTaskPage(index, task) {
+    buildTaskHeader(index, task);
     buildTaskMain();
     buildTaskFooter();
 
+    let globalState = index;
+
     document.querySelector('svg').addEventListener('click', () => {
             document.querySelector('#app').innerHTML = '';
-            buildProjectPage();
+            buildProjectPage(globalState);
           })
 }

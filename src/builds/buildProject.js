@@ -10,6 +10,9 @@ export default function buildProjectPage(index) {
     buildProjectMain(index);
     buildProjectFooter();
 
+    let globalState = index;
+    let secondaryState = ''
+
     document.querySelector('svg').addEventListener('click', () => {
         document.querySelector('#app').innerHTML = '';
         buildHomePage();
@@ -18,7 +21,8 @@ export default function buildProjectPage(index) {
       document.querySelectorAll('.task-tile').forEach(tile => {
         tile.addEventListener('click', () => {
           document.querySelector('#app').innerHTML = '';
-          buildTaskPage(tile.dataset.label);
+          secondaryState = Number(tile.dataset.label);
+          buildTaskPage(globalState, secondaryState);
         })
       })
 

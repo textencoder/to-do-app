@@ -3,7 +3,7 @@ import buildHomeMain from '../markup/home/main.js';
 import buildHomeFooter from '../markup/home/footer.js';
 import buildProjectPage from './buildProject.js';
 
-import { projectArr } from '../logic/create.js';
+let globalState = '';
 
 export default function buildHomePage() {
     buildHomeHeader();
@@ -18,7 +18,8 @@ export default function buildHomePage() {
     document.querySelectorAll('.project-tile').forEach(tile => {
         tile.addEventListener('click', () => {
             document.querySelector('#app').innerHTML = '';
-            buildProjectPage(tile.dataset.label);
+            globalState = Number(tile.dataset.label);
+            buildProjectPage(globalState);
     })
     })
 }
