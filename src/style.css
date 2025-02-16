@@ -58,7 +58,7 @@ header {
   }
 }
 
-main {
+#home-main {
   display: grid;
   gap: 20px;
   padding: 20px;
@@ -107,6 +107,30 @@ footer {
     background-color: hsl(255, 74%, 44%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
+}
+
+#project-main {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+  scrollbar-width:none;
+}
+
+.task-tile {
+  height: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(200, 200, 200);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  padding: 0 20px;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+ 
 }
 
 @media (prefers-color-scheme: light) {
