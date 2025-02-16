@@ -1,26 +1,30 @@
-const buildTaskMain = () => {
+import { projectArr } from "../../logic/create";
+
+const buildTaskMain = (index, task) => {
     const taskMain = document.createElement('main');
     taskMain.id = "task-main";
   
     document.querySelector('#app').append(taskMain);
 
-    //buildTaskTile();
+    buildTaskInfo(index, task);
   }   
 
-  /*
-  const buildTaskTile = () => {
-    const taskTile = document.createElement('section');
-    taskTile.classList.add('task-tile');
+  const buildTaskInfo = (index, task) => {
+    const taskInfo = document.createElement('section');
+    taskInfo.classList.add('task-info');
   
-    const taskName = document.createElement('h3');
+    const taskDesc = document.createElement('p');
     const priority = document.createElement('div');
-    const dueDate = document.createElement('p');
-    const moreIcon = document.createElement('div');
-  
-    taskTile.append(taskName, priority, dueDate, moreIcon)
+    const dueDate = document.createElement('h4');
 
-    document.querySelector('#task-main').append(taskTile);
+    taskDesc.textContent = "description: " + projectArr[index].toDoList[task].description;
+    priority.textContent = "priority: " + projectArr[index].toDoList[task].priority;
+    dueDate.textContent = "due date: " + projectArr[index].toDoList[task].dueDate;
+  
+    taskInfo.append(taskDesc, priority, dueDate)
+
+    document.querySelector('#task-main').append(taskInfo);
   }
-    */
+  
   
   export default buildTaskMain;
