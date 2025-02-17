@@ -7,7 +7,7 @@ import buildProjectPage from "./buildProject";
 export default function buildTaskPage(index, task) {
     buildTaskHeader(index, task);
     buildTaskMain(index, task);
-    buildTaskFooter();
+    buildTaskFooter(index, task);
 
     let globalState = index;
 
