@@ -19,7 +19,14 @@ const buildProjectTile = (index) => {
 
   projectTile.classList.add('project-tile')
 
-  tasksCompleted.textContent = `0/${projectArr[index].toDoList.length} tasks • 0%`
+  let count = 0;
+  for (const item of projectArr[index].toDoList) {
+    if (item.status == 'Completed') {
+      count++
+    }
+  }
+
+  tasksCompleted.textContent = `${count}/${projectArr[index].toDoList.length} tasks • ${Number(((count / projectArr[index].toDoList.length) * 100).toFixed(0))}%`
   projectName.textContent = projectArr[index].title;
 
   projectTile.append(tasksCompleted, projectName);
