@@ -8,7 +8,7 @@ const buildProjectMain = (index) => {
 
   document.querySelector("#app").append(projectMain);
 
-  if (index == null) {
+  if (index == null || projectArr[index].toDoList.length == 0) {
     return;
   } else {
     for (let i = 0; i < projectArr.length; i++) {

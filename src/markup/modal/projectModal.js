@@ -1,4 +1,5 @@
-import { addProjectToMemory } from "../../logic/create";
+import { projectArr, addProjectToMemory } from "../../logic/create";
+import buildProjectPage from "../../builds/buildProject";
 
 const projectModal = () => {
     const dialog = document.createElement('dialog');
@@ -30,9 +31,16 @@ const projectModal = () => {
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
         console.log(projectName.value)
-        //addProjectToMemory(projectName.value)
+        addProjectToMemory(projectName.value)
         //dialog.close(projectName.value);
         dialog.remove();
+        console.log(projectArr)
+        for (let [index, project] of projectArr.entries()) {
+            if (project.title == projectName.value) {
+                document.querySelector('#app').innerHTML = ''
+                buildProjectPage(index)
+            }
+        }
     })
 
     dialog.showModal();
