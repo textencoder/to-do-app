@@ -26,7 +26,13 @@ const buildProjectTile = (index) => {
     }
   }
 
-  tasksCompleted.textContent = `${count}/${projectArr[index].toDoList.length} tasks • ${Number(((count / projectArr[index].toDoList.length) * 100).toFixed(0))}%`
+  let percentCompleted = Number(((count / projectArr[index].toDoList.length) * 100).toFixed(0));
+  if (percentCompleted == 100) {
+    projectTile.style.borderColor = 'green';
+    tasksCompleted.style.color = 'green';
+  }
+  
+  tasksCompleted.textContent = `${count}/${projectArr[index].toDoList.length} tasks • ${percentCompleted}%`
   projectName.textContent = projectArr[index].title;
 
   projectTile.append(tasksCompleted, projectName);

@@ -73,7 +73,7 @@ header {
   height: 160px;
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid var(--color-blue);
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -83,10 +83,14 @@ header {
   gap: 15px;
   text-align: left;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  p {
+    color: rgb(160, 160, 160);
+  }
 }
 
 .project-tile:hover {
-  background-color: var(--color-light-blue);
+  background-color: ghostwhite;
 }
 
 footer {
@@ -100,8 +104,8 @@ footer {
   height: 115px;
 
   button {
-    width: 33%;
-    height: 50%;
+    width: 200px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +135,7 @@ footer {
 }
 
 .task-tile {
-  height: 120px;
+  height: 100px;
   border-radius: 20px;
   cursor: pointer;
   border: 1px solid rgb(200, 200, 200);
@@ -140,27 +144,39 @@ footer {
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 30px;
   text-align: left;
-  
   background-color: white;
 
-  div:nth-of-type(1) {
-    text-align: right;
-    padding-right: 10px;
-    font-size: 3rem;
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    color: rgb(160, 160, 160);
+    display: flex;
+    
+
+    svg {
+      stroke: rgb(160, 160, 160);
+    }
+  }
+
+  div {
+    justify-self: end;
+    display: grid;
+    place-items: center;
   }
 
   div:nth-of-type(2) {
-    text-align: right;
-    font-size: 2rem;
-    padding-right: 10px;
-    color: grey;
+    svg {
+      stroke: rgb(160, 160, 160);
+    }
   }
 }
 
 .task-tile:hover {
-  background-color: var(--color-light-blue);
+  background-color: ghostwhite;
 }
 
 #task-main {
