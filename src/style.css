@@ -86,12 +86,6 @@ header {
   background-color: var(--color-light-blue);
 }
 
-.priority {
-  text-align: right;
-  padding-right: 10px;
-  font-size: 3rem;
-}
-
 footer {
   display: grid;
   place-items: center;
@@ -132,14 +126,21 @@ footer {
   border-radius: 20px;
   cursor: pointer;
   border: 1px solid rgb(200, 200, 200);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   padding: 0 20px;
   text-align: left;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
   background-color: white;
+
+  div:nth-of-type(1) {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 3rem;
+  }
 
   div:nth-of-type(2) {
     text-align: right;
@@ -161,7 +162,19 @@ footer {
 
 .task-info {
   display: grid;
-  grid-template-rows: repeat(3, 1fr)
+  grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+  text-align: left;
+  font-size: 1.25rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  label {
+    color: grey;
+    font-size: 0.75rem;
+  }
 }
 
 @media (prefers-color-scheme: light) {

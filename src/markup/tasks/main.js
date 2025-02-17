@@ -14,20 +14,24 @@ const buildTaskMain = (index, task) => {
     const taskInfo = document.createElement('section');
     taskInfo.classList.add('task-info');
   
+    const taskDescLabel = document.createElement('label');
     const taskDesc = document.createElement('p');
+    const priorityLabel = document.createElement('label');
     const priority = document.createElement('div');
+    const dueDateLabel = document.createElement('label');
     const dueDate = document.createElement('h4');
 
     priority.classList.add('priority');
     priority.style.color = priorityObj[projectArr[index].toDoList[task].priority];
     
-
-    taskDesc.textContent = "Description: " + projectArr[index].toDoList[task].description;
-    priority.textContent = 'Priority: ' + '•' + projectArr[index].toDoList[task].priority;
-    
-    dueDate.textContent = "Due Date: " + projectArr[index].toDoList[task].dueDate;
+    taskDescLabel.textContent = 'Description';
+    taskDesc.textContent = projectArr[index].toDoList[task].description;
+    priorityLabel.textContent = "Priority";
+    priority.textContent = '•' + projectArr[index].toDoList[task].priority;
+    dueDateLabel.textContent = "Due Date"
+    dueDate.textContent = projectArr[index].toDoList[task].dueDate;
   
-    taskInfo.append(taskDesc, priority, dueDate)
+    taskInfo.append(taskDescLabel, taskDesc, priorityLabel, priority, dueDateLabel, dueDate)
 
     document.querySelector('#task-main').append(taskInfo);
   }

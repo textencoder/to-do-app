@@ -1,6 +1,6 @@
 const priorityObj = {
     'high': 'red',
-    'medium': 'yellow',
+    'medium': 'gold',
     'low': 'green'
   };
 
