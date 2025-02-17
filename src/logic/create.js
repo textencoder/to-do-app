@@ -4,12 +4,13 @@ import Project from "./project.js";
 let projectArr = [];
 
 function addProjectToMemory(project) {
-    projectArr.push(project);
+    projectArr.push(new Project(project));
 }
 function addToDo(project, toDo) {
     projectArr[project].toDoList.push(toDo);
 }
 
+/*
 const project1 = new Project("Deep Clean", 
                             new ToDo('sweep floor', 'use swiffer to clean up debris and mop floor', null, 'high', 'In Progress'),
                             new ToDo('wash dishes', 'rinse and run dishwasher', null, 'low', 'Completed'));
@@ -30,5 +31,6 @@ addToDo(1, new ToDo('create module', 'import classes and interconnect', null, 'm
 addToDo(2, new ToDo('help mom', 'no room for fake plants', null, 'low', 'Completed'))
 
 console.log(projectArr)
+*/
 
 export { projectArr, addProjectToMemory, addToDo };

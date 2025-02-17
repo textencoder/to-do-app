@@ -202,6 +202,64 @@ footer {
   }
 }
 
+.project-modal {
+  display: grid;
+  place-self: center;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: calc(100% - 200px);
+  height: 200px;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  input {
+    width: 80%;
+    height: 80%;
+    padding-left: 10px;
+    font-size: 1.25rem;
+  }
+
+  .submit-btn {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--color-blue);
+    font-weight: 500;
+    color: white;
+  }
+
+  .submit-btn:hover {
+    background-color: hsl(255, 74%, 44%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .close-btn {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    svg {
+      stroke: grey;
+    }
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
