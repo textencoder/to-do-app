@@ -1,9 +1,15 @@
 const buildHomeHeader = () => {
   const homeHeader = document.createElement('header');
-  const headerHeader = document.createElement('h1');
-   headerHeader.textContent = 'Projects'
-   homeHeader.appendChild(headerHeader);
+  const headerHeader = document.createElement('h2');
 
+  const logoImg = document.createElement('img');
+  logoImg.src = 'public/upnext_v1.png';
+  logoImg.style.width = '200px';
+  logoImg.style.paddingTop = '4px'
+   headerHeader.textContent = 'Projects'
+   homeHeader.append(logoImg, headerHeader);
+
+   /*
    homeHeader.innerHTML += `
    <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +25,7 @@ const buildHomeHeader = () => {
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
    `
+   */
 
    document.querySelector('#app').append(homeHeader);
 }

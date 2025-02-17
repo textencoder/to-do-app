@@ -1,4 +1,5 @@
 import { projectArr } from "../../logic/create";
+import { priorityObj } from "../modules/priorityObj.js";
 
 const buildProjectMain = (index) => {
   const projectMain = document.createElement('main');
@@ -26,10 +27,13 @@ const buildTaskTile = (index, item) => {
   const dueDate = document.createElement('p');
   const moreIcon = document.createElement('div');
 
+  priority.classList.add('priority');
+
   taskName.textContent = projectArr[index].toDoList[item].title;
-  priority.textContent = projectArr[index].toDoList[item].priority;
+  priority.textContent = '•';
+  priority.style.color = priorityObj[projectArr[index].toDoList[item].priority];
   dueDate.textContent = projectArr[index].toDoList[item].dueDate;
-  moreIcon.textContent = 'more info >'
+  moreIcon.textContent = '>'
 
   taskTile.append(taskName, priority, dueDate, moreIcon)
 

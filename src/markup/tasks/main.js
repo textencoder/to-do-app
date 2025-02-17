@@ -1,4 +1,5 @@
 import { projectArr } from "../../logic/create";
+import { priorityObj } from "../modules/priorityObj.js"
 
 const buildTaskMain = (index, task) => {
     const taskMain = document.createElement('main');
@@ -17,9 +18,14 @@ const buildTaskMain = (index, task) => {
     const priority = document.createElement('div');
     const dueDate = document.createElement('h4');
 
-    taskDesc.textContent = "description: " + projectArr[index].toDoList[task].description;
-    priority.textContent = "priority: " + projectArr[index].toDoList[task].priority;
-    dueDate.textContent = "due date: " + projectArr[index].toDoList[task].dueDate;
+    priority.classList.add('priority');
+    priority.style.color = priorityObj[projectArr[index].toDoList[task].priority];
+    
+
+    taskDesc.textContent = "Description: " + projectArr[index].toDoList[task].description;
+    priority.textContent = 'Priority: ' + '•' + projectArr[index].toDoList[task].priority;
+    
+    dueDate.textContent = "Due Date: " + projectArr[index].toDoList[task].dueDate;
   
     taskInfo.append(taskDesc, priority, dueDate)
 
