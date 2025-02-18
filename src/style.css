@@ -114,13 +114,13 @@ footer {
     cursor: pointer;
     border: none;
     font-size: 1rem;
-    background-color: var(--color-blue);
+    background: linear-gradient(160deg, #6E00BF, #330055);
     font-weight: 500;
     color: white;
   }
 
   button:hover {
-    background-color: hsl(255, 74%, 44%);
+    opacity: 90%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 }
@@ -234,13 +234,13 @@ footer {
     cursor: pointer;
     border: none;
     font-size: 1rem;
-    background-color: var(--color-blue);
+    background: linear-gradient(160deg, #6E00BF, #330055);
     font-weight: 500;
     color: white;
   }
 
   .submit-btn:hover {
-    background-color: hsl(255, 74%, 44%);
+    opacity: 90%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
@@ -331,14 +331,14 @@ footer {
     cursor: pointer;
     border: none;
     font-size: 1rem;
-    background-color: var(--color-blue);
+    background: linear-gradient(160deg, #6E00BF, #330055);
     font-weight: 500;
     color: white;
     grid-area: 6 / 2 / 7 / 3;
   }
 
   .submit-btn:hover {
-    background-color: hsl(255, 74%, 44%);
+    opacity: 90%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
