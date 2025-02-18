@@ -7,7 +7,7 @@ const buildHomeMain = () => {
   document.querySelector("#app").appendChild(homeMain);
 
   if (projectArr.length == 0) {
-    homeMain.textContent = "You don't have any projects yet. Create a new project to get started!"
+    homeMain.innerHTML = "<p>You don't have any projects yet.</p><p>Create a new project to get started!</p>"
   } else {
     for (let i = 0; i < projectArr.length; i++) {
       buildProjectTile(i);
@@ -44,7 +44,7 @@ const buildProjectTile = (index) => {
 
   projectTile.append(tasksCompleted, projectName);
 
-  document.querySelector("#home-main").prepend(projectTile);
+  document.querySelector("#home-main").append(projectTile);
 };
 
 export default buildHomeMain;

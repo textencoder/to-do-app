@@ -1,7 +1,5 @@
 import './style.css';
-
 import buildHomePage from './builds/buildHome.js';
-
 import { projectArr, addProjectToMemory, addToDo } from './logic/create.js';
 
 function storageAvailable(type) {
@@ -41,3 +39,7 @@ if (storageAvailable('localStorage')) {
 }
 
 buildHomePage();
+
+document.ondblclick = function(e) {
+    e.preventDefault();
+  }

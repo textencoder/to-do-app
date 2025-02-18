@@ -9,7 +9,7 @@ const buildProjectMain = (index) => {
   document.querySelector("#app").append(projectMain);
 
   if (index == null || projectArr[index].toDoList.length == 0) {
-    projectMain.textContent = "This project does not have any tasks yet. Publish a new task to get started!"
+    projectMain.innerHTML = "<p>This project does not have any tasks yet.</p> <p>Publish a new task to get started!</p>"
     return;
   } else {
     for (let i = 0; i < projectArr[index].toDoList.length; i++) {
