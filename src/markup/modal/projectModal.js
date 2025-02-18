@@ -1,4 +1,4 @@
-import { projectArr, addProjectToMemory } from "../../logic/create";
+import { projectArr, addProjectToMemory, setStorage } from "../../logic/create";
 import buildProjectPage from "../../builds/buildProject";
 
 const projectModal = () => {
@@ -35,6 +35,7 @@ const projectModal = () => {
         e.preventDefault();
         console.log(projectName.value)
         addProjectToMemory(projectName.value)
+        setStorage()
         //dialog.close(projectName.value);
         dialog.remove();
         console.log(projectArr)

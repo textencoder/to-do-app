@@ -5,11 +5,19 @@ let projectArr = [];
 
 function addProjectToMemory(project) {
     projectArr.push(new Project(project));
+    //setStorage()
 }
 function addToDo(project, ...toDo) {
     projectArr[project].toDoList.push(new ToDo(...toDo));
+    //setStorage()
 }
 
+function setStorage() {
+    for (let project of projectArr) {
+        localStorage.setItem(JSON.stringify(project.title), JSON.stringify(project.toDoList));
+    }
+}
+/*
 const project1 = "Deep Clean";
 const project2 = "To Do App";
 const project3 = "Go Out Today";
@@ -30,6 +38,6 @@ addToDo(1, 'create module', 'import classes and interconnect', new Date().toDate
 addToDo(2, 'help mom', 'no room for fake plants', new Date().toDateString(), 'low', 'Completed')
 
 console.log(projectArr)
+*/
 
-
-export { projectArr, addProjectToMemory, addToDo };
+export { projectArr, addProjectToMemory, addToDo, setStorage };

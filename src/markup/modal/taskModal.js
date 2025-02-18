@@ -1,4 +1,4 @@
-import { projectArr, addToDo } from "../../logic/create";
+import { projectArr, addToDo, setStorage } from "../../logic/create";
 import buildProjectPage from "../../builds/buildProject";
 
 const taskModal = (index) => {
@@ -53,7 +53,8 @@ const taskModal = (index) => {
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
         //console.log(taskName.value)
-        addToDo(index, taskName.value, taskDesc.value, dueDate.value, priority.value, 'In Progress')
+        addToDo(index, taskName.value, taskDesc.value, dueDate.value, priority.value, 'In Progress');
+        setStorage()
         //dialog.close(taskName.value);
         dialog.remove();
         console.log("task name: ", taskName.value);

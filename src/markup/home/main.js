@@ -44,7 +44,7 @@ const buildProjectTile = (index) => {
 
   projectTile.append(tasksCompleted, projectName);
 
-  document.querySelector("#home-main").appendChild(projectTile);
+  document.querySelector("#home-main").prepend(projectTile);
 };
 
 export default buildHomeMain;
