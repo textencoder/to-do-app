@@ -10,27 +10,26 @@ function addToDo(project, ...toDo) {
     projectArr[project].toDoList.push(new ToDo(...toDo));
 }
 
-/*
-const project1 = new Project("Deep Clean", 
-                            new ToDo('sweep floor', 'use swiffer to clean up debris and mop floor', null, 'high', 'In Progress'),
-                            new ToDo('wash dishes', 'rinse and run dishwasher', null, 'low', 'Completed'));
-const project2 = new Project("To Do App",
-                            new ToDo('project module', 'create project class', null, 'low', 'Completed'), 
-                            new ToDo('toDo module', 'create toDo class', null, 'high', 'Completed'));
-
-const project3 = new Project("Go Out Today",
-                            new ToDo('get dressed', 'its a cold world bundle up', null, 'medium', 'Completed'), 
-                            new ToDo('go to store', 'buy some goofy juice', null, 'high', 'In Progress'))
+const project1 = "Deep Clean";
+const project2 = "To Do App";
+const project3 = "Go Out Today";
 
 addProjectToMemory(project1)
 addProjectToMemory(project2)
 addProjectToMemory(project3)
 
-addToDo(0, new ToDo('take out garbage', 'dispose of trash and replace with new bag', null, 'high', 'In Progress'))
-addToDo(1, new ToDo('create module', 'import classes and interconnect', null, 'medium', 'In Progress'))
-addToDo(2, new ToDo('help mom', 'no room for fake plants', null, 'low', 'Completed'))
+addToDo(0, 'sweep floor', 'use swiffer to clean up debris and mop floor', new Date().toDateString(), 'high', 'In Progress'),
+addToDo(0, 'wash dishes', 'rinse and run dishwasher', new Date().toDateString(), 'low', 'Completed');
+addToDo(1, 'project module', 'create project class', new Date().toDateString(), 'low', 'Completed'), 
+addToDo(1, 'toDo module', 'create toDo class', new Date().toDateString(), 'high', 'Completed');
+addToDo(2, 'get dressed', 'its a cold world bundle up', new Date().toDateString(), 'medium', 'Completed'), 
+addToDo(2, 'go to store', 'buy some goofy juice', new Date().toDateString(), 'high', 'In Progress')
+
+addToDo(0, 'take out garbage', 'dispose of trash and replace with new bag', new Date().toDateString(), 'high', 'In Progress')
+addToDo(1, 'create module', 'import classes and interconnect', new Date().toDateString(), 'medium', 'In Progress')
+addToDo(2, 'help mom', 'no room for fake plants', new Date().toDateString(), 'low', 'Completed')
 
 console.log(projectArr)
-*/
+
 
 export { projectArr, addProjectToMemory, addToDo };

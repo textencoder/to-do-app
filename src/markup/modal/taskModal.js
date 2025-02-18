@@ -13,6 +13,8 @@ const taskModal = (index) => {
     taskName.placeholder = 'Task Name...';
     taskName.required = true;
     taskName.autofocus = true;
+    taskName.minLength = '1';
+    taskName.maxLength = '20';
 
     const taskDesc = document.createElement('textarea');
     taskDesc.placeholder = "Task description..."
@@ -30,8 +32,6 @@ const taskModal = (index) => {
     mediumPriority.textContent = 'medium'
     lowPriority.textContent = 'low'
     priority.append(highPriority, mediumPriority, lowPriority);
-
-
 
     const submitBtn = document.createElement('button');
     submitBtn.classList.add('submit-btn')

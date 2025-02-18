@@ -9,12 +9,11 @@ const buildProjectMain = (index) => {
   document.querySelector("#app").append(projectMain);
 
   if (index == null || projectArr[index].toDoList.length == 0) {
-    console.log('invalid index');
+    projectMain.textContent = "This project does not have any tasks yet. Publish a new task to get started!"
     return;
   } else {
     for (let i = 0; i < projectArr[index].toDoList.length; i++) {
       buildTaskTile(index, i);
-      console.log('for loop activated: ', i)
     }
   }
 };

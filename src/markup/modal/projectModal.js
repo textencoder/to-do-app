@@ -12,6 +12,8 @@ const projectModal = () => {
     projectName.placeholder = 'Project Name...';
     projectName.required = true;
     projectName.autofocus = true;
+    projectName.minLength = '1';
+    projectName.maxLength = '20';
     const submitBtn = document.createElement('button');
     submitBtn.classList.add('submit-btn')
     submitBtn.textContent = 'Submit';
