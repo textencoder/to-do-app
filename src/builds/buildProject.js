@@ -5,6 +5,8 @@ import buildProjectFooter from '../markup/projects/footer.js';
 import buildHomePage from './buildHome.js';
 import buildTaskPage from './buildTask.js';
 
+import taskModal from '../markup/modal/taskModal.js';
+
 export default function buildProjectPage(index) {
     buildProjectHeader(index);
     buildProjectMain(index);
@@ -27,7 +29,7 @@ export default function buildProjectPage(index) {
       })
 
       document.querySelector('#project-footer button').addEventListener('click', () => {
-        document.querySelector('#app').innerHTML = '';
-        buildTaskPage();
+        //document.querySelector('#app').innerHTML = '';
+        taskModal(index);
     })
 }

@@ -6,8 +6,8 @@ let projectArr = [];
 function addProjectToMemory(project) {
     projectArr.push(new Project(project));
 }
-function addToDo(project, toDo) {
-    projectArr[project].toDoList.push(toDo);
+function addToDo(project, ...toDo) {
+    projectArr[project].toDoList.push(new ToDo(...toDo));
 }
 
 /*

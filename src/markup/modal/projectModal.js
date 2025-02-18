@@ -15,6 +15,7 @@ const projectModal = () => {
     const submitBtn = document.createElement('button');
     submitBtn.classList.add('submit-btn')
     submitBtn.textContent = 'Submit';
+    submitBtn.type = 'submit';
 
     const closeBtn = document.createElement('button');
     closeBtn.classList.add('close-btn')
@@ -42,6 +43,8 @@ const projectModal = () => {
             }
         }
     })
+
+    
 
     dialog.showModal();
 }
