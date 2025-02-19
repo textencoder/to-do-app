@@ -3,7 +3,7 @@ const buildHomeHeader = () => {
   //const headerHeader = document.createElement('h2');
 
   const logoImg = document.createElement('img');
-  logoImg.src = '/public/upnext_v1.png';
+  logoImg.src = '/to-do-app/upnext_v1.png';
   logoImg.style.width = '200px';
   logoImg.style.paddingTop = '4px'
    //headerHeader.textContent = 'Projects'
